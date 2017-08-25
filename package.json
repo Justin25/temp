@@ -1,0 +1,22 @@
+{
+  "name": "Urlshortener",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "cors": "^2.8.4",
+    "express": "^4.15.4",
+    "moment": "^2.18.1",
+    "mongodb": "^2.2.31",
+    "mongoose": "^4.11.7",
+    "valid-url": "^1.0.9"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "",
+  "license": "ISC"
+}
