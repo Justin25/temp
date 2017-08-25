@@ -23,16 +23,18 @@ var myFunction = function () {
 for (var i = 0; i < set.length; i++) {
   set[i].addEventListener('click', myFunction, false);
 }
-$(document).on('submit', '.form', (e) => {
-  e.preventDefault();
-  var name = $('#name').val();
-  var name = $('#quote').val();
-  $.ajax({
-    type: 'POST',
-    url: '/quotes',
-    data: {'name': name, 'quote': quote},
-    success: data => {
-      $(".test").html(data);
-    }
-  })
-})
+form.addEventListener('submit', function(){
+    form.preventDefault();
+    var name = $('#name').val();
+    var name = $('#quote').val();
+    $.ajax({
+      type: 'POST',
+      url: '/quotes',
+      data: {'name': name, 'quote': quote},
+      dataType: 'json',
+      success: function(data) {
+        $(".test").text(data);
+      }
+    })
+  }
+);
