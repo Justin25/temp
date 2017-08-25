@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>MY APP</title>
+  <script type="text/javascript" src="ejs_production.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+<body>
+  <ul class="cards">
+  <% for(var i=0; i<cards.length; i++) {%>
+    <li class="card">
+      <button class = "set" id = <% i %>><span id = <%= cards[i] %>><%= cards[i] %></span></button>
+    </li>
+  <% } %>
+  </ul>
+  <form action = "/new" method = "POST">
+        <input type="text" placeholder="Set Name" name="name">
+        <button type="submit">Create</button>
+  </form>
+  <script src="main.js"></script>
+</body>
+</html>

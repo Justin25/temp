@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>MY APP</title>
+  <script type="text/javascript" src="ejs_production.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+<body>
+  <h1 class = "test"></h1>
+  <ul class="quotes">
+  <% for(var i=0; i<quotes.length; i++) {%>
+    <li class="quote">
+      <span><%= quotes[i].name %></span>
+      <span><%= quotes[i].quote %></span>
+    </li>
+  <% } %>
+  </ul>
+  <form id="form" method="POST" action="/quotes">
+    <input type="text" placeholder="name" name="name" id = "name">
+    <input type="text" placeholder="quote" name="quote" id = "quote">
+    <button type="submit">Submit</button>
+  </form>
+  <script src="main.js"></script>
+</body>
+</html>
