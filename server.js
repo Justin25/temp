@@ -9,7 +9,7 @@ app.use(bodyParser.json());
 app.set('view options', { layout:'setview.ejs' });
 var db;
 var curSet;
-MongoClient.connect('mongodb://Justin25:123456@ds028310.mlab.com:28310/web-app-test', (err, database) => {
+MongoClient.connect('mongodb://Justin25:<password>@ds028310.mlab.com:28310/web-app-test', (err, database) => {
   if (err) throw err;
   db = database;
   app.listen(3000, () => {
